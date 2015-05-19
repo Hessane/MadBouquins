@@ -1,0 +1,8 @@
+bouquins_back:
+    resource: "@bouquinsBackBundle/Resources/config/routing.yml"
+    prefix:   /
+
+bouquins_front:
+    resource: "@bouquinsFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+

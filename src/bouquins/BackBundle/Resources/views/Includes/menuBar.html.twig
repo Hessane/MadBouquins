@@ -1,0 +1,22 @@
+<div class="container navigation">
+    <div class="row navigation">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            {% if not is_granted("ROLE_ADMIN") %}
+                <div class="navbar-form" >
+                    <div class="btn-group navbar-right">
+                        <a href="{{ path('bouquins_front_homepage')}}" class="btn btn-default"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Voir boutique</a>
+                    </div>
+                </div>
+            {% else %}
+                <div class="navbar-form" >
+                    <div class="btn-group navbar-right">
+                        <a href="{{ path('bouquins_front_homepage')}}" class="btn btn-default"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Voir boutique</a>
+                        <a href="{{ path('fos_user_security_logout') }}" class="btn btn-warning"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Se deconnecter</a>
+                    </div>
+                </div>
+
+
+            {% endif %}
+        </nav>
+    </div>
+</div>

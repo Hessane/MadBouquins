@@ -1,0 +1,28 @@
+{% extends"::base.html.twig" %}
+{% block stylesheets %}
+    {% stylesheets '@bootstrap_css' '@styleslSheet_index_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+{% block body %}
+
+{% include "bouquinsFrontBundle:Includes:menuBar.html.twig" %}
+    <ol class="breadcrumb">
+        <li><a href="{{ path('bouquins_front_homepage')}}">Accueil</a></li>
+        <li class="active">Inscription</li>
+    </ol>
+
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+
+
+{% include "bouquinsFrontBundle:Includes:footer.html.twig" %}
+
+{% endblock %}
+{% block javascripts %}
+    {% javascripts '@jquery' '@bootstrap_js' '@home_js' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}

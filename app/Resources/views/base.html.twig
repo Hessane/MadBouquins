@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        {% stylesheets '@bootstrap_css' %}
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+
+
+
+<body>
+<div class="container">
+    {% block body %}
+        <h1>Mon Titre</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo erat, congue vitae imperdiet quis, blandit sed nulla. Integer efficitur purus velit, vel eleifend turpis sagittis sit amet. Ut faucibus sapien id nunc viverra viverra. Phasellus sagittis dictum metus eget interdum. Morbi facilisis, erat ac consequat commodo, turpis lorem egestas dolor, vel molestie nulla turpis vulputate diam. Integer et sapien ac tortor finibus semper vel vitae libero. Donec est felis, malesuada in diam a, molestie porta velit. Donec pretium metus eros, eu egestas enim dictum at. Nunc ac turpis porta, rhoncus risus id, hendrerit odio. Morbi mattis malesuada convallis. Aliquam sollicitudin euismod tristique.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo erat, congue vitae imperdiet quis, blandit sed nulla. Integer efficitur purus velit, vel eleifend turpis sagittis sit amet. Ut faucibus sapien id nunc viverra viverra. Phasellus sagittis dictum metus eget interdum. Morbi facilisis, erat ac consequat commodo, turpis lorem egestas dolor, vel molestie nulla turpis vulputate diam. Integer et sapien ac tortor finibus semper vel vitae libero. Donec est felis, malesuada in diam a, molestie porta velit. Donec pretium metus eros, eu egestas enim dictum at. Nunc ac turpis porta, rhoncus risus id, hendrerit odio. Morbi mattis malesuada convallis. Aliquam sollicitudin euismod tristique.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo erat, congue vitae imperdiet quis, blandit sed nulla. Integer efficitur purus velit, vel eleifend turpis sagittis sit amet. Ut faucibus sapien id nunc viverra viverra. Phasellus sagittis dictum metus eget interdum. Morbi facilisis, erat ac consequat commodo, turpis lorem egestas dolor, vel molestie nulla turpis vulputate diam. Integer et sapien ac tortor finibus semper vel vitae libero. Donec est felis, malesuada in diam a, molestie porta velit. Donec pretium metus eros, eu egestas enim dictum at. Nunc ac turpis porta, rhoncus risus id, hendrerit odio. Morbi mattis malesuada convallis. Aliquam sollicitudin euismod tristique.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo erat, congue vitae imperdiet quis, blandit sed nulla. Integer efficitur purus velit, vel eleifend turpis sagittis sit amet. Ut faucibus sapien id nunc viverra viverra. Phasellus sagittis dictum metus eget interdum. Morbi facilisis, erat ac consequat commodo, turpis lorem egestas dolor, vel molestie nulla turpis vulputate diam. Integer et sapien ac tortor finibus semper vel vitae libero. Donec est felis, malesuada in diam a, molestie porta velit. Donec pretium metus eros, eu egestas enim dictum at. Nunc ac turpis porta, rhoncus risus id, hendrerit odio. Morbi mattis malesuada convallis. Aliquam sollicitudin euismod tristique.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo erat, congue vitae imperdiet quis, blandit sed nulla. Integer efficitur purus velit, vel eleifend turpis sagittis sit amet. Ut faucibus sapien id nunc viverra viverra. Phasellus sagittis dictum metus eget interdum. Morbi facilisis, erat ac consequat commodo, turpis lorem egestas dolor, vel molestie nulla turpis vulputate diam. Integer et sapien ac tortor finibus semper vel vitae libero. Donec est felis, malesuada in diam a, molestie porta velit. Donec pretium metus eros, eu egestas enim dictum at. Nunc ac turpis porta, rhoncus risus id, hendrerit odio. Morbi mattis malesuada convallis. Aliquam sollicitudin euismod tristique.</p>
+        <button type="button" class="btn btn-success">Success</button>
+
+    {% endblock %}
+</div>
+
+{% block javascripts %}
+{% javascripts '@jquery' '@bootstrap_js' %}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+{% endblock %}
+
+
+</body>
+</html>

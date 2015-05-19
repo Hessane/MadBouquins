@@ -1,0 +1,8 @@
+services:
+  redirect.after.front.login:
+    class: bouquins\FrontBundle\Redirection\AfterLoginRedirection
+    arguments: [@router]
+
+  redirect.after.front.logout:
+    class: bouquins\FrontBundle\Redirection\AfterLogoutRedirection
+    arguments: [@router, @security.context]

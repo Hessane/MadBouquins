@@ -1,0 +1,22 @@
+{% extends"::base.html.twig" %}
+{% block stylesheets %}
+    {% stylesheets '@bootstrap_css' '@stylesAdmin_index_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+{% block body %}
+
+    {% include "bouquinsBackBundle:Includes:menuBar.html.twig" %}
+
+    {% include "bouquinsBackBundle:Includes:navBarAdmin.html.twig" %}
+
+    {% include "bouquinsBackBundle:Includes:ajoutProduit.html.twig" %}
+
+    {% include "bouquinsBackBundle:Includes:footer.html.twig" %}7
+
+{% endblock %}
+{% block javascripts %}
+    {% javascripts '@jquery' '@bootstrap_js' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}

@@ -1,0 +1,58 @@
+<div class="container navigation">
+    <div class="row navigation">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <form class="navbar-form navbar-collapse collapse navbar-left bar-search" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Rechercher...">
+                </div>
+                <button type="submit" class="btn btn-default">Envoyer</button>
+            </form>
+            {% if not is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <div class="navbar-collapse collapse navbar-right ">
+                    <div class="bar-conn">
+                        <ul class="nav navbar-nav ">
+                            <li><a href="#">Panier <span class="badge">0</span><span class="caret"></span></a></li>
+                            <li><a href="{{ path('bouquins_front_register')}}">Enregistrez-vous!</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="{{ path('bouquins_front_login')}}"  >Se connnecter<strong class="caret"></strong></a>
+
+                                    {{ render (controller('bouquinsFrontBundle:Security:loginMin'))}}
+
+
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                {% else %}
+                    <div class="navbar-collapse collapse navbar-right ">
+                        <div class="bar-conn">
+                            <ul class="nav navbar-nav ">
+                                <li><a href="#">Panier <span class="badge">0</span><span class="caret"></span></a></li>
+                                <li><a href="{{ path('fos_user_security_logout') }}">Se deconnecter</a></li>
+                                <li><a href="#">Mon compte</a></li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+            {% endif %}
+        </nav>
+    </div><!-- row navigation -->
+</div><!-- container navigation -->
+<div class="container navigationSecondary">
+    <div class="row navigationSecondary">
+        <nav class="navbar navbar-default navbar-secondary" role="navigation">
+            <div class="navbar-collapse collapse navbar-left">
+                <ul class="nav navbar-nav">
+                    <li><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Accueil</a></li>
+                    <li><a href="#">Informatique</a></li>
+                    <li><a href="#">Comptabilité</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div><!-- row navigationSecondary -->
+</div><!-- container navigationSecondary -->
+
+

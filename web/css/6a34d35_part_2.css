@@ -1,0 +1,65 @@
+body{
+    padding-top: 70px;
+}
+
+.form-control{
+    float: left;
+    margin: 0.7px,10px;
+
+}
+
+.myForm
+{
+    border-spacing: 10px 5px;
+}
+
+.colorTexte
+{
+    color: darkgreen;
+}
+.footerBasMargin{
+    margin-top: 45px;
+}
+.ctnMarginL { margin-left: 100px; }
+.ctnMarginR { margin-right: 100px; }
+
+.footerMil{
+    background-color: #bebec5;
+}
+.footer-container a{
+    color: #101010 ;
+}
+.footer-block
+{
+    background-color: transparent;
+}
+.footer-container{
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.footer-info{
+
+    background-color: #464646;
+    height: 100px;
+}
+.footer-info a{
+    color: #ffffff;
+}
+.footer-banner{
+    background-color: #b3b3b3;
+    height: 60px;
+    margin-top: 55px;
+}
+.footer-banner .icon-gly{
+    margin-top: 10px;
+}
+.bar-conn{
+    margin-right: 150px;
+}
+.bar-search{
+    margin-left: 5%;
+}
+.fill-width{
+    white-space: normal;
+}

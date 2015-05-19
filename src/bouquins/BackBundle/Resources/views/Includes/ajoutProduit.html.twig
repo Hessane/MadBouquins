@@ -1,0 +1,62 @@
+<div class="container">
+
+    <div class="jumbotron">
+        <fieldset>
+            <legend>
+                Rubrique dans {{ nomCategorie }}
+                <button class="btn btn-warning btn-xl navbar-right" data-toggle="modal" data-target="#myModalCat">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="myModalCat" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel">Créer une nouvelle rubrique</h4>
+                            </div>
+                            <div class="modal-body">
+                                {{ form_start(form) }}
+                                <label>Titre sous categorie</label>
+                                {{ form_widget(form.nomCategorie, {'attr': {'class': 'form-control'}}) }}<br>
+                                {{ form_widget(form.save, {'attr': {'class': 'btn-warning navbar-right'}}) }}
+                                {{ form_end(form) }}
+                                <br><br><br>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+            </legend>
+        </fieldset>
+    </div>
+    <div class="jumbotron">
+        <fieldset>
+            <legend>
+                Produit dans {{ nomCategorie }}
+                <button class="btn btn-warning btn-xl navbar-right" data-toggle="modal" data-target="#myModalCat">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="myModalCat" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel">Créer une nouvelle rubrique</h4>
+                            </div>
+                            <div class="modal-body">
+                                {{ form_start(form) }}
+                                <label>Créer un nouveau produit</label>
+                                {{ form_widget(form.nomCategorie, {'attr': {'class': 'form-control'}}) }}<br>
+                                {{ form_widget(form.save, {'attr': {'class': 'btn-warning navbar-right'}}) }}
+                                {{ form_end(form) }}
+                                <br><br><br>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal
+            </legend>
+        </fieldset>
+    </div>
+
+</div>

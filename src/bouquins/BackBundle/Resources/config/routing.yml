@@ -1,0 +1,24 @@
+bouquins_back_homepage:
+    path:     /admin
+    defaults: { _controller: bouquinsBackBundle:Default:index }
+
+bouquins_back_login:
+    path:     /admin/login
+    defaults: { _controller: bouquinsBackBundle:Login:login }
+
+bouquins_back_dashboard:
+    path:     /admin/dashboard
+    defaults: { _controller: bouquinsBackBundle:Dashboard:index }
+
+bouquins_back_catalogue:
+    path:     /admin/dashboard/catalogue
+    defaults: { _controller: bouquinsBackBundle:Catalogue:ajouterCategorie }
+
+bouquins_back_ajout_produit:
+    path:     /admin/dashboard/categorie/{nomCategorie}
+    defaults: { _controller: bouquinsBackBundle:AjoutProduit:ajoutProduit }
+
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
